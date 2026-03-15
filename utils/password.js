@@ -1,3 +1,4 @@
+// filepath: d:\CI-CD-and-testing\utils\password.js
 const crypto = require('crypto');
 
 function hashPassword(password, salt) {

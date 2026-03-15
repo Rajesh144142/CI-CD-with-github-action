@@ -1,3 +1,4 @@
+// filepath: d:\CI-CD-and-testing\.prettierrc
 {
   "singleQuote": true,
   "semi": true,
