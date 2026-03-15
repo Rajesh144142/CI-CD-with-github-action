@@ -17,6 +17,9 @@ jobs:
           node-version: 18
           cache: npm
       - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm run security
       - run: npm test
 
   staging:
