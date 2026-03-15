@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use((req, res, next) => {
-  console.log('Going through this middleware.....');
+  console.log('Going through this middleware.........');
   next();
 });
 
