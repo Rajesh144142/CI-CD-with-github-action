@@ -7,12 +7,12 @@ const app = express();
 
 app.use(express.json());
 app.use((req, res, next) => {
-    console.log('Going through this middleware.....');
-    next();
+  console.log('Going through this middleware.....');
+  next();
 });
 
 app.get('/', (req, res) => {
-    res.send({ msg: 'working....' });
+  res.send({ msg: 'working....' });
 });
 
 app.use('/db-health', healthRouter);
