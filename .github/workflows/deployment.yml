@@ -11,11 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
+
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
@@ -23,7 +25,7 @@ jobs:
       - run: npm test
 
   staging:
-    if: github.ref == 'develop'
+    if: github.ref == 'refs/heads/develop'
     needs: test
     runs-on: ubuntu-latest
     environment: staging
@@ -31,7 +33,7 @@ jobs:
       - run: echo "Staging CI gate passed"
 
   production:
-    if: github.ref == 'main'
+    if: github.ref == 'refs/heads/main'
     needs: test
     runs-on: ubuntu-latest
     environment: production
