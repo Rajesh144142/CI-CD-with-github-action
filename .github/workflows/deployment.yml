@@ -23,7 +23,7 @@ jobs:
       - run: npm test
 
   staging:
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'develop'
     needs: test
     runs-on: ubuntu-latest
     environment: staging
@@ -31,7 +31,7 @@ jobs:
       - run: echo "Staging CI gate passed"
 
   production:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'main'
     needs: test
     runs-on: ubuntu-latest
     environment: production
