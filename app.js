@@ -1,5 +1,4 @@
 const express = require('express');
-const { initDb } = require('./db');
 const healthRouter = require('./routes/health');
 const authRouter = require('./routes/auth');
 const itemsRouter = require('./routes/items');
