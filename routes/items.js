@@ -1,3 +1,4 @@
+// filepath: d:\CI-CD-and-testing\routes\items.js
 const express = require('express');
 const { getDb } = require('../db');
 const { authRequired } = require('../middleware/auth');
