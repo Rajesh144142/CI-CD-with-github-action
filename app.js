@@ -1,5 +1,4 @@
 const express = require('express');
-const { initDb } = require('./db');
 const healthRouter = require('./routes/health');
 const authRouter = require('./routes/auth');
 const itemsRouter = require('./routes/items');
@@ -8,12 +7,12 @@ const app = express();
 
 app.use(express.json());
 app.use((req, res, next) => {
-    console.log('Going through this middleware.....');
-    next();
+  console.log('Going through this middleware.....');
+  next();
 });
 
 app.get('/', (req, res) => {
-    res.send({ msg: 'working....' });
+  res.send({ msg: 'working....' });
 });
 
 app.use('/db-health', healthRouter);

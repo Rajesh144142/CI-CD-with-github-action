@@ -8,13 +8,23 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev":"nodemon index.js"
+    "dev": "nodemon index.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "security": "npm audit --audit-level=high"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-security": "^1.7.1",
+    "prettier": "^3.2.5"
   },
   "dependencies": {
     "express": "^5.2.1",
     "jest": "^30.3.0",
     "nodemon": "^3.1.14",
-    "sqlite3": "^5.1.7",
+    "sqlite3": "^6.0.1",
     "supertest": "^7.2.2",
     "try-catch": "^3.0.1"
   }
