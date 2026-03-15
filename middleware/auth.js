@@ -1,3 +1,4 @@
+// filepath: d:\CI-CD-and-testing\middleware\auth.js
 const { getDb } = require('../db');
 
 function authRequired(req, res, next) {

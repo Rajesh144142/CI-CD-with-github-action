@@ -1,3 +1,4 @@
+// filepath: d:\CI-CD-and-testing\.eslintignore
 node_modules/
 coverage/
 dist/
